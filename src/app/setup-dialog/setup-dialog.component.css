@@ -1,0 +1,21 @@
+.data-input {
+  width: 128px;
+}
+
+.data-icon {
+  padding-bottom: 18px;
+  padding-left: 0;
+}
+
+.data-label {
+  margin-bottom: 18px;
+}
+
+.data-box {
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+
+mat-form-field.big-input {
+  font-size: 18px;
+}

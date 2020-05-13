@@ -1,0 +1,66 @@
+<h2 mat-dialog-title>Ustawienia</h2>
+
+<mat-dialog-content>
+
+  <form [formGroup]="form">
+
+    <div class="container data-box">
+
+      <div class="row">
+        <div class="col-auto d-flex align-items-center data-icon">
+          <mat-icon class="size-48">school</mat-icon>
+        </div>
+
+        <div class="col d-flex align-items-center">
+          <h1 class="data-label">Nauka</h1>
+        </div>
+
+        <div class="col-auto">
+          <mat-form-field class="data-input big-input" appearance="fill">
+            <input matInput type="number" formControlName="study">
+            <span matSuffix>min</span>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto d-flex align-items-center data-icon">
+          <mat-icon class="size-48">access_time</mat-icon>
+        </div>
+
+        <div class="col d-flex align-items-center">
+          <h1 class="data-label">Przerwa</h1>
+        </div>
+
+        <div class="col-auto">
+          <mat-form-field class="data-input big-input" appearance="fill">
+            <input matInput type="number" formControlName="pause">
+            <span matSuffix>min</span>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto d-flex align-items-center data-icon">
+          <mat-icon class="size-48">repeat</mat-icon>
+        </div>
+
+        <div class="col d-flex align-items-center">
+          <h1 class="data-label">Serie</h1>
+        </div>
+
+        <div class="col-auto">
+          <mat-form-field class="data-input big-input" appearance="fill">
+            <input matInput type="number" formControlName="series">
+          </mat-form-field>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+  <button mat-stroked-button [disabled]="!form.valid" (click)="save()">ZAPISZ USTAWIENIA</button>
+</mat-dialog-actions>

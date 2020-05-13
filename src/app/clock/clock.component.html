@@ -1,0 +1,29 @@
+<div class="circle" *ngIf="clockService.time | async as time">
+
+  <div class="curr-cycle">
+    <h1 class="mat-display-3">{{clockService.cycleName | async}}</h1>
+  </div>
+
+  <div class="container center-clock">
+    <div class="row justify-content-center align-items-center">
+
+      <div class="col-auto time-box">
+        <h1 class="mat-display-4 time-text">{{time.minutes}}</h1>
+      </div>
+
+      <div class="col-auto">
+        <div class="clock-divider"></div>
+      </div>
+
+      <div class="col-auto time-box">
+        <h1 class="mat-display-4 time-text">{{time.seconds}}</h1>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="curr-series">
+    <h1>Seria {{clockService.numOfSeries | async}}/{{clockService.getSetup().series}}</h1>
+  </div>
+
+</div>
