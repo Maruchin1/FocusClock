@@ -7,7 +7,7 @@ export class ImagesService {
   constructor() {
   }
 
-  private readonly LOOP_INTERVAL_SECONDS = 60;
+  private readonly LOOP_INTERVAL_SECONDS = 300;
   private readonly IMAGES: string[] = [
     'assets/bg_1.jpg',
     'assets/bg_2.jpg',

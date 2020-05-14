@@ -19,9 +19,9 @@ export class SetupDialogComponent implements OnInit {
   private setup = this.clockService.getSetup();
 
   form = this.formBuilder.group({
-    study: [this.setup.study, Validators.required],
-    pause: [this.setup.pause, Validators.required],
-    series: [this.setup.series, Validators.required]
+    study: [this.setup.study, [Validators.required, Validators.min(1)]],
+    pause: [this.setup.pause, [Validators.required, Validators.min(1)]],
+    series: [this.setup.series, [Validators.required, Validators.min(1)]]
   });
 
   ngOnInit(): void {
